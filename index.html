@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <style>
+        /* Estilos CSS para personalizar la apariencia de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .artwork {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .artwork img {
+            max-width: 100%;
+        }
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.artwork {
+			flex: 0 0 calc(50% - 20px);
+			box-sizing: border-box;
+			margin: 10px;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artworks</h1>
+    </header>    
+	<div align="center"><img src="https://lh3.googleusercontent.com/pw/ADCreHe1KF4vyNxhxazYRpyrgITJGQJT-VXsfTC-cnRLytFqamcyhwc62lck32fagJxmW9ZMZgsivU22AlGL5LIM6mtU2B_3CxLm55jLfhztiMBKg1qfycYKyTznCm5yLjafXHELdMutH2g0UtJqEarCQDqXDA=w297-h316-s-no-gm?authuser=0" alt="logo"></div>
+    <div class="container">
+        <h2>Publicar Obras de Arte</h2>
+		
+        <hr>
+        <!-- Formulario para subir una obra de arte -->
+        <h3>Subir una Obra de Arte</h3>
+        <form action="procesar_subida.php" method="post" enctype="multipart/form-data">
+            <label for="titulo">Título de la Obra:</label>
+            <input type="text" id="titulo" name="titulo" required>
+            <br>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            <br>
+
+            <label for="imagen">Imagen de la Obra:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            <br>
+
+            <input type="submit" value="Subir Obra">
+        </form>
+
+        <hr>
+        <!-- Listado de obras de arte -->
+
+        <div class="artwork">
+            <h4>La última cena (Leonardo da Vinci)</h4>
+            <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2017/03/07/5f15f37c129ba.jpeg" alt="Obra 1">
+            <p>La última cena (en italiano: Il cenacolo o L’ultima cena) es una pintura mural original de Leonardo da Vinci ejecutada entre 1495 y 1498.1​2​ Se encuentra en la pared sobre la que se pintó originalmente, en el refectorio del convento dominico de Santa Maria delle Grazie, en Milán (Italia),3​ declarado Patrimonio de la Humanidad por la Unesco en 1980.4​ La pintura fue elaborada para su patrón, el duque Ludovico Sforza de Milán. No es un fresco tradicional, sino un mural ejecutado al temple y óleo sobre dos capas de preparación de yeso extendidas sobre enlucido. Mide 460 cm de alto por 880 cm de ancho. Muchos expertos e historiadores del arte consideran La última cena como una de las mejores obras pictóricas del mundo.</p>
+        </div>
+
+        <div class="artwork">
+            <h4>El grito (Edvard Munch)</h4>
+            <img src="https://www.elindependiente.com/wp-content/uploads/2021/08/GRITO-EDVARD-MUNCH-656x368.jpg" alt="Obra 2">
+            <p>El grito es el título de cuatro cuadros del noruego Edvard Munch. La versión más famosa se encuentra en la Galería Nacional de Noruega y fue completada en 1893.1​ Otras dos versiones del cuadro se encuentran en el Museo Munch, también en Oslo, mientras que la cuarta versión pertenece a una colección particular. En 1895, Munch realizó también una litografía con el mismo título.</p>
+        </div>
+		
+		 <div class="artwork">
+            <h4>La mona lisa (Leonardo da Vinci)</h4>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Leonardo_da_Vinci_-_Mona_Lisa_%28Louvre%2C_Paris%29.jpg" alt="Obra 3">
+            <p>El retrato de Lisa Gherardini, esposa de Francesco del Giocondo,1​ más conocido como La Gioconda (La Joconde en francés) o Monna Lisa, es una obra pictórica del polímata renacentista italiano Leonardo da Vinci. Fue adquirida por el rey Francisco I de Francia a comienzos del siglo xvi y desde entonces es propiedad del Estado francés. Se halla expuesta en el Museo del Louvre de París, siendo, sin duda, la «joya» de sus colecciones.</p>
+        </div>
+		
+		 <div class="artwork">
+            <h4>Dos mujeres leyendo (Pablo Picasso)</h4>
+            <img src="https://cdn.pixabay.com/photo/2022/04/10/12/37/pablo-picasso-7123310_1280.jpg" alt="Obra 4">
+            <p>Es un óleo sobre lienzo que el artista pinta en 1934 y en el que se ve a dos mujeres disfrutando de la lectura conjunta de un libro, en actitud cercana. Entre 1934 y 1937 Picasso realizó un buen número de pinturas en las que se observa a mujeres leyendo, pintando o estudiando.</p>
+        </div>
+    </div>
+    <footer>
+
+        <address>
+      
+          Programador: Rodrigo Arturo Carreño Vallejo<br>
+      
+          racarrenov@unadvirtual.edu.co
+
+          Ingeniería Multimedia
+      
+        </address>   
+      </footer>
+</body>
+</html>
